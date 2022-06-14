@@ -23,7 +23,7 @@
       answer.innerHTML="";
       for (var i =0; i <data.length;i++){
         var div = document.createElement("div");
-        div.innerHTML= '<strong>UserID: ' + data[i].userId + '</strong> <strong>id: ' + data[i].id + '</strong> <br> <strong>title: </strong>' + data[i].title + '<br> <strong>body:</strong> '+ data[i].body + '<br><br>';
+        div.innerHTML= '<strong>UserID: ' + data[i].userId + '</strong> <br> <strong>id: '+ data[i].id + '</strong> <br> <strong>title: '+ data[i].title + '</strong> <br> <strong>body: '+ data[i].body + '</strong> <br> ' ;
         answer.appendChild(div);
       }
       }
