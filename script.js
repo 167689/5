@@ -31,7 +31,20 @@
   })
 
   cw2.addEventListener("click", function () {
-    //TODO implement it
+    answer.innerHTML="Loading..."
+    fetch('https://jsonplaceholder.typicode.com/posts')
+      .then(response => response.json())
+      .then(function (data) { appendData(data)
+        console.log(data)})
+     function appendData(data){
+      answer.innerHTML="";
+       let i=5;
+      if ( i ==5){
+        var div = document.createElement("div");
+        div.innerHTML= '<strong>UserID: ' + data[i].userId + '</strong> <br> <strong>id: '+ data[i].id + '</strong> <br> <strong>title: '+ data[i].title + '</strong> <br> <strong>body: '+ data[i].body + '</strong> <br> ' ;
+        answer.appendChild(div);
+      }
+      }
   })
 
   cw3.addEventListener("click", function () {
